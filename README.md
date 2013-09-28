@@ -1,4 +1,4 @@
-# FlaskExample
+# FlaskExample <img src="http://files.softicons.com/download/application-icons/free-developer-icons-by-designkode/png/32/flask.png"/>
 
 A Flask example to show posting to a REST interface with a MongoDB Backend
 
@@ -6,13 +6,15 @@ A Flask example to show posting to a REST interface with a MongoDB Backend
 
 You will need to have a few different things for this to work
 
-    1. Python 2.7.x
-    2. MongoDB
-    3. Flask
-    4. pymongo
-    5. A browser that doesn't suck
+1. Python 2.7.x
+2. MongoDB
+3. Flask
+4. pymongo
+5. A browser that doesn't suck
 
-Check your python version
+#### Check Python & MongoDB
+
+Check your python version with
 
 <pre>python --version</pre>
 
@@ -20,7 +22,7 @@ Install MongoDB
 
 <pre>sudo apt-get -y install mongodb</pre>
 
-Install Flask & pymongo
+#### Install Flask & pymongo
 
 Ensure you have pip installed
 
@@ -42,6 +44,8 @@ And you should see the following
  * Running on http://127.0.0.1:5000/
  * Restarting with reloader
 </pre>
+
+Then nagigate to <code>http://127.0.0.1:5000/</code> in your browser that doesn't suck, and it should work
 
 ### Enjoy!
 
