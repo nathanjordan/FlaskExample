@@ -14,23 +14,25 @@ You will need to have a few different things for this to work
 
 Check your python version
 
-<pre>python -v</pre>
+<pre>python --version</pre>
 
 Install MongoDB
 
-<pre>sudo apt-get install mongodb</pre>
+<pre>sudo apt-get -y install mongodb</pre>
 
 Install Flask & pymongo
 
+Ensure you have pip installed
+
+<pre>sudo apt-get -y install python-pip</pre>
+
+Then install the python packages
+
 <pre>sudo pip install Flask pymongo</pre>
-
-if you don't have pip
-
-<pre>sudo apt-get install python-pip</pre>
 
 ## Usage
 
-To run the server, simply run <code>server.py</code>
+To run the server, simply run <code>server.py</code> like so
 
 <pre>python server.py</pre>
 
@@ -39,6 +41,8 @@ And you should see the following
 <pre>
  * Running on http://127.0.0.1:5000/
  * Restarting with reloader
-</pre>>
+</pre>
 
 ### Enjoy!
+
+<img src="http://mrwgifs.com/wp-content/uploads/2013/06/Spongebob-Rainbow-Of-Imagination-Reaction-Gif.gif"/>
