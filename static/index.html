@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>A Flask/MongoDB Example using REST and AJAX</title>
+        <meta name="description" content="A Flask/MongoDB Example using REST and AJAX"/>
+        <meta name="author" content="Nathan Jordan"/>
+    </head>
+    <body>
+        <h3>New User</h3>
+        <form id="userForm">
+            <label for="formUsername">Username</label>
+            <input id="formUsername" type="text" placeholder="Enter Username"/>
+            <br/>
+            <label for="formFirstName">First Name</label>
+            <input id="formFirstName" type="text" placeholder="Enter First Name"/>
+            <br/>
+            <label for="formLastName">Last Name</label>
+            <input id="formLastName" type="text" placeholder="Enter Last Name"/>
+            <br/>
+            <button id="submitButton" type="button">Add/Update</button>
+        </form>
+        <hr/>
+        <h3>User List</h3>
+        <ol id="userList">
+            <!-- Nothing goes here since we're loading it via AJAX! -->
+        </ol>
+        <!-- Script at end of body so it doesn't delay page load -->
+        <script type="text/javascript" src="/assets/jquery.js"></script>
+        <script type="text/javascript" src="/assets/ajax.js"></script>
+    </body>
+</html>
