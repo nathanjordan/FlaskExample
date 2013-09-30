@@ -51,7 +51,7 @@ And you should see the following
  * Restarting with reloader
 </pre>
 
-Then nagigate to <code>http://127.0.0.1:5000/</code> in your browser that doesn't suck, and it should work
+Then navigate to <code>http://127.0.0.1:5000/</code> in your browser that doesn't suck, and it should work
 
 ### Enjoy!
 
