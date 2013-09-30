@@ -2,6 +2,12 @@
 
 A Flask example to show posting to a REST interface with a MongoDB Backend
 
+## Get FlaskExample
+
+Move to a directory where you'd like to have the example placed and execute the following command
+
+<pre>git clone https://github.com/nathanjordan/FlaskExample.git</pre>
+
 ## Dependencies
 
 You will need to have a few different things for this to work
@@ -34,7 +40,7 @@ Then install the python packages
 
 ## Usage
 
-To run the server, simply run <code>server.py</code> like so
+To run the server, simply cd into the FlaskExample directory and run <code>server.py</code> like so
 
 <pre>python server.py</pre>
 
