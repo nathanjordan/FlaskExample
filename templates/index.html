@@ -7,19 +7,14 @@
         <meta name="author" content="Nathan Jordan"/>
     </head>
     <body>
+        {# This is a comment, it won't show up in the HTML source. Here,
+           appName is outputted into the HTML document inside an h1 tag #}
+        <h1>{{ appName }}</h1>
         <h3>New User</h3>
-        <form id="userForm">
-            <label for="formUsername">Username</label>
-            <input id="formUsername" type="text" placeholder="Enter Username"/>
-            <br/>
-            <label for="formFirstName">First Name</label>
-            <input id="formFirstName" type="text" placeholder="Enter First Name"/>
-            <br/>
-            <label for="formLastName">Last Name</label>
-            <input id="formLastName" type="text" placeholder="Enter Last Name"/>
-            <br/>
-            <button id="submitButton" type="button">Add/Update</button>
-        </form>
+        {# This includes the userForm partial into this document,
+           so we don't have to put all the stuff we need into one giant
+           html file. Hooray modularity! #}
+        {% include 'partials/userForm.html' %}
         <hr/>
         <h3>User List</h3>
         <ol id="userList">
