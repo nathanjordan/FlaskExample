@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request
+from flask import Flask, send_from_directory, request, render_template
 from pymongo import MongoClient
 from bson import json_util
 import json
@@ -17,8 +17,10 @@ flaskdb = client.flaskexample
 
 @app.route('/', methods=['GET'])
 def index():
-    # Return the static index page
-    return app.send_static_file('index.html')
+    applicationName = 'FlaskExample'
+    # Render the index template, and inject applicationName
+    # into the template as appName
+    return render_template('index.html', appName=applicationName)
 
 @app.route('/users/<username>', methods=['GET', 'PUT', 'DELETE'])
 def handleUserRequest(username):
