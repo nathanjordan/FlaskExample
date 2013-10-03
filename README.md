@@ -16,7 +16,7 @@ You will need to have a few different things for this to work
 2. MongoDB
 3. Flask
 4. pymongo
-5. A browser that doesn't suck
+5. A Browser (Firefox 3.6.5+, Chrome, IE8+)
 
 #### Check Python & MongoDB
 
@@ -51,7 +51,7 @@ And you should see the following
  * Restarting with reloader
 </pre>
 
-Then navigate to <code>http://127.0.0.1:5000/</code> in your browser that doesn't suck, and it should work
+Then navigate to <code>http://127.0.0.1:5000/</code> in a browser listed above, and it should work
 
 ### Enjoy!
 
