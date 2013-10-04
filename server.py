@@ -15,6 +15,12 @@ client = MongoClient('localhost', 27017)
 # Load the FlaskExample database
 flaskdb = client.flaskexample
 
+# Routes are how Flask determines what the browser gets sent back to it.
+# In this case, when the user requests '/' from the webserver, the function
+# index will be executed. The value returned from the function is what Flask
+# sends back to the web browser. For '/' (the index of the site), I have Flask
+# render the index template (look in templates/index.html for more info on this)
+# and returns the resulting HTML to the browser.
 @app.route('/', methods=['GET'])
 def index():
     applicationName = 'FlaskExample'
@@ -22,6 +28,9 @@ def index():
     # into the template as appName
     return render_template('index.html', appName=applicationName)
 
+# This route is for the user resource. The methods allow you to
+# GET a user resource, create/update it (PUT), or delete (DELETE) it.
+# The browser interacts with these interfaces via AJAX calls.
 @app.route('/users/<username>', methods=['GET', 'PUT', 'DELETE'])
 def handleUserRequest(username):
     # Get the users collection
@@ -45,6 +54,7 @@ def handleUserRequest(username):
         usersdb.remove({'username': username })
         return ''
 
+# This route returns all the users in the database
 @app.route('/users', methods=['GET'])
 def getUsers():
     # Get the users collection
@@ -60,5 +70,7 @@ def serveStaticResource(resource):
     # Return the static file
     return send_from_directory('static/assets/', resource)
 
+# If we're running this script directly (eg. 'python server.py')
+# run the Flask application to start accepting connections
 if __name__ == "__main__":
-    app.run()
+    app.run('localhost', 5000)

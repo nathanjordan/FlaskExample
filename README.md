@@ -51,7 +51,7 @@ And you should see the following
  * Restarting with reloader
 </pre>
 
-Then navigate to <code>http://127.0.0.1:5000/</code> in a browser listed above, and it should work
+Then navigate to <code>http://localhost:5000/</code> in a browser listed above, and it should work
 
 ### Enjoy!
 
