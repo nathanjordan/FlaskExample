@@ -73,4 +73,4 @@ def serveStaticResource(resource):
 # If we're running this script directly (eg. 'python server.py')
 # run the Flask application to start accepting connections
 if __name__ == "__main__":
-    app.run()
+    app.run('localhost', 5000)
