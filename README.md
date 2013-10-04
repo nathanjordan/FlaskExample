@@ -47,7 +47,7 @@ To run the server, simply cd into the FlaskExample directory and run <code>serve
 And you should see the following
 
 <pre>
- * Running on http://127.0.0.1:5000/
+ * Running on http://localhost:5000/
  * Restarting with reloader
 </pre>
 
