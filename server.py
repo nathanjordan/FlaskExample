@@ -65,10 +65,10 @@ def getUsers():
     return json_util.dumps(users)
 
 # Serves static resources like css, js, images, etc.
-@app.route('/assets/<path:resource>')
+@app.route('/js/<path:resource>')
 def serveStaticResource(resource):
     # Return the static file
-    return send_from_directory('static/assets/', resource)
+    return send_from_directory('static/js/', resource)
 
 # If we're running this script directly (eg. 'python server.py')
 # run the Flask application to start accepting connections
