@@ -1,14 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ng-app="UserManager">
     <head>
         <meta charset="utf-8"/>
         <title>A Flask/MongoDB Example using REST and AJAX</title>
         <meta name="description" content="A Flask/MongoDB Example using REST and AJAX"/>
         <meta name="author" content="Nathan Jordan"/>
+        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
     </head>
-    <body>
+    <body data-ng-controller="UserController">
         {# This is a comment, it won't show up in the HTML source. Here,
-           appName is outputted into the HTML document inside an h1 tag #}
+        appName is outputted into the HTML document inside an h1 tag.
+        In this case, {{ }} tells Flask to output the value of appName
+        to the HTML document. Unfortunately, Angular.js uses {{ }} for data
+        bindings as well, so in this case, we will have to add {{ }} for Angular
+        using the Flask templating engine. (Sorry if this is confusing, see example
+        below) #}
         <h1>{{ appName }}</h1>
         <h3>New User</h3>
         {# This includes the userForm partial into this document,
@@ -17,13 +23,36 @@
         {% include 'partials/userForm.html' %}
         <hr/>
         <h3>User List</h3>
-        <ol id="userList">
-            <!-- Nothing goes here since we're loading it via AJAX! -->
-        </ol>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th></th>
+            </tr>
+            {# ng-repeat, as it might sound, repeats the element it is
+               applied to for each element of an array from the controller,
+               which in this case is 'users'. #}
+            <tr data-ng-repeat="user in users">
+                <td>
+                    {{ '{{user.username}}' }}
+                </td>
+                <td>
+                    {{ '{{user.getFullName()}}' }}
+                </td>
+                <td>
+                    {# This button calls the delete user function 
+                       in the controller #}
+                    <dfnbutton data-ng-click="deleteUser(user.username)">Delete</button>
+                </td>
+            </tr>
+        </table>
         <!-- Script at end of body so it doesn't delay page load -->
-        <script type="text/javascript" src="/assets/jquery.js"></script>
-        <script type="text/javascript" src="/assets/underscore.js"></script>
-        <script type="text/javascript" src="/assets/async.js"></script>
-        <script type="text/javascript" src="/assets/main.js"></script>
+        <script type="text/javascript" src="/assets/js/lib/jquery.js"></script>
+        <script type="text/javascript" src="/assets/js/lib/underscore.js"></script>
+        <script type="text/javascript" src="/assets/js/lib/async.js"></script>
+        <script type="text/javascript" src="/assets/js/lib/angular.js"></script>
+        <script type="text/javascript" src="/assets/js/lib/angular-resource.js"></script>
+        <script type="text/javascript" src="/assets/js/FlaskExample/controllers/UserController.js"></script>
+        <script type="text/javascript" src="/assets/js/FlaskExample/UserManager.js"></script>
     </body>
 </html>
