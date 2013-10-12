@@ -1,4 +1,12 @@
 /*
+ * I left this file here for reference, as it is obselete with
+ * the inclusion on Angular. This file shows how it works
+ * in the backend without angular, so you know its not black
+ * magic :)
+ *
+ */
+/////////////////////////////////////////////////////////////////////
+/*
  * This function runs when the DOM is ready, it initializes
  * the form for creating users, and loads the users
  * present in the Mongo Database
