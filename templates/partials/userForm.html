@@ -1,12 +1,13 @@
-<form id="userForm">
+<form id="userForm" data-ng-submit="addUpdateUser()">
     <label for="formUsername">Username</label>
-    <input id="formUsername" type="text" placeholder="Enter Username"/>
+    <input id="formUsername" type="text" placeholder="Enter Username" data-ng-model="username"/>
     <br/>
     <label for="formFirstName">First Name</label>
-    <input id="formFirstName" type="text" placeholder="Enter First Name"/>
+    <input id="formFirstName" type="text" placeholder="Enter First Name" data-ng-model="firstName"/>
     <br/>
     <label for="formLastName">Last Name</label>
-    <input id="formLastName" type="text" placeholder="Enter Last Name"/>
+    <input id="formLastName" type="text" placeholder="Enter Last Name" data-ng-model="lastName"/>
     <br/>
-    <button id="submitButton" type="button">Add/Update</button>
+    <label></label>
+    <input type="submit" value="Add/Update User"/>
 </form>

@@ -1,6 +1,8 @@
 # FlaskExample <img src="http://files.softicons.com/download/application-icons/free-developer-icons-by-designkode/png/32/flask.png"/>
 
-A Flask example to show posting to a REST interface with a MongoDB Backend
+A Flask example to show posting to a REST interface created by Flask,
+with a MongoDB Backend. On the front-end, it makes use of Angular.js for
+REST interaction and data binding.
 
 ## Get FlaskExample
 
